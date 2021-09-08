@@ -75,24 +75,7 @@
 			},
 			"response": []
 		},
-		{
-			"name": "ьтьбт",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "{{url}}api/unknown",
-					"host": [
-						"{{url}}api"
-					],
-					"path": [
-						"unknown"
-					]
-				}
-			},
-			"response": []
-		},
-		{
+				{
 			"name": "reqres.in",
 			"event": [
 				{
