@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>моя форма регистрации</title>
+	<style type="text/css">
+		body {
+    position: relative;
+    margin: 0px;
+    font-size: 14px;
+    font-family: Helvetica,sans-serif;
+			}
+	.mainForm {
+	margin-left: auto;
+    margin-right: auto;
+	width: 550px;
+    border-radius: 35px;
+    border: 3px dashed #ffb000;
+    box-shadow: none;
+    padding: 50px 40px 80px 40px;
+    position: relative;
+}
+	</style>
+</head>
+<body>
+<div class="mainForm">
+	<h1> Форма регистрации на курс</h1>
+<form>
+	<p>Выберите курс обучения *</p>
+    <select id="name_kursy" required>
+		<option> English for IT</option>
+		<option> FRONT-END С НУЛЯ</option>
+		<option> UI/UX ДИЗАЙН</option>
+		<option> JavaScript</option>
+	</select>
+	<p>В какое время удобно посещать курсы *</p>
+    <div>
+    	<label for="time_udobno">Утреннее время</label>
+		<input id="time_udobno" type="radio" name="time_udobno" value="utro" required>
+		<label for="time_udobno">Обеденное время </label>
+		<input id="time_udobno" type="radio" name="time_udobno" value="obed" required>
+		<label for="time_udobno">Вечернее время </label>
+		<input id="time_udobno" type="radio" name="time_udobno" value="vecher" required>
+    </div>
+    <p>Укажите свой возраст</p>
+<div class="slidecontainer">
+  	<input id="myRange" type="range" min="0" max="100" value="50" class="slider" >
+  		<p>Возраст: <span id="demo"></span></p>
+</div>
+	<p>Какой ваш любимый цвет</p>
+<div class="color">
+	<input id="color_like" type="color" value="#ff0000" name="color_like">
+</div>
+<p>Выберите удобный для вас месяц</p>
+<div class="mesiac">
+	<input type="month" name="calendar">
+</div>
+<div class="danye_name">
+		<input id="username" type="text" name="username" class="text required" placeholder="Ваше имя *" required >
+		<input id="email" type="email" name="pochta" class="text email required" placeholder="E-mail адрес *" required >
+		<input id="telefon" type="tel" name="telefon" class="text phone required" placeholder="Телефон *" required >
+</div>
+
+    <div>
+    	<input id="OK" type="submit" name="OK">
+    	<input id="Reset" type="Reset" name="Reset">
+    </div>
+</form>
+</div>
+
+<script>
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value;
+
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
+</script>
+
+</body>
+</html>
