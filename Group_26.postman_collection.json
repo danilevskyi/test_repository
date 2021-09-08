@@ -1,0 +1,187 @@
+{
+	"info": {
+		"_postman_id": "fba7ef90-18e4-49fd-9eb6-c859d8d4e12c",
+		"name": "Group_26",
+		"description": "quality test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"union-opt@yandex.ua\",\r\n    \"name\": \"union-opt\",\r\n    \"password\": \"union-opt\"\r\n}"
+				},
+				"url": {
+					"raw": "http://users.bugred.ru/tasks/rest/doregister",
+					"protocol": "http",
+					"host": [
+						"users",
+						"bugred",
+						"ru"
+					],
+					"path": [
+						"tasks",
+						"rest",
+						"doregister"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "danilevskyi.andrey@gmail.com",
+							"disabled": true
+						},
+						{
+							"key": "name",
+							"value": "danilevskyi.andrey",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "danilevskyi.andrey",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create company",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"company_name\": \"Вам к Нам\",\r\n  \"company_type\": \"ООО\",\r\n  \"company_users\": [\"danilevskyi.andrey@gmail.com\", \"com.mirtex@gmail.com\", \"union-opt@yandex.ua\"],\r\n  \"email_owner\": \"union-opt@yandex.ua\"\r\n}"
+				},
+				"url": {
+					"raw": "http://users.bugred.ru/tasks/rest/createcompany",
+					"protocol": "http",
+					"host": [
+						"users",
+						"bugred",
+						"ru"
+					],
+					"path": [
+						"tasks",
+						"rest",
+						"createcompany"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ьтьбт",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}api/unknown",
+					"host": [
+						"{{url}}api"
+					],
+					"path": [
+						"unknown"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "reqres.in",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Verifi is Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}api/users?page=2",
+					"host": [
+						"{{url}}api"
+					],
+					"path": [
+						"users"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"eve.holt@reqres.in\",\r\n    \"password\": \"pistol\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://reqres.in/api/register",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": ""
+		}
+	]
+}
